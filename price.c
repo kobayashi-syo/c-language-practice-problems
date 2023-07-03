@@ -14,16 +14,9 @@ int main(void) {
     // 金額の計算
     int amount = unit_price * quantity;
 
-    // 税込み金額の計算
-    float tax_included_amount = amount * (1 + tax_rate);
-
-    // 四捨五入
-    int rounded_amount = round(amount);
-    int rounded_tax_included_amount = round(tax_included_amount);
-
     // 結果の表示
-    printf("金額: %d\n", rounded_amount);
-    printf("税込み金額: %d\n", rounded_tax_included_amount);
+    printf("金額: %d\n", round(amount));
+    printf("税込み金額: %d\n", (int)round(amount * (1 + tax_rate)));
 
     return 0;
 }
