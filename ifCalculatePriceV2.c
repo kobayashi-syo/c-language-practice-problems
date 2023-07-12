@@ -49,7 +49,7 @@ int main(void) {
     }
 
     total_price_with_tax = total_price + total_price * TAXRATE;
-    total_price_with_tax = floor(total_price_with_tax + 0.5);
+    total_price_with_tax = round(total_price_with_tax);
 
     printf("料金合計は %d 円です。\n", total_price);
     printf("税込料金合計は %.0f 円です。\n", total_price_with_tax);
